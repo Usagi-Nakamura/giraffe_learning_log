@@ -7,11 +7,11 @@ open System
 open System.Reflection
 
 
-[<assembly: System.Reflection.AssemblyCompanyAttribute("giraffe_learning_log.App")>]
+[<assembly: System.Reflection.AssemblyCompanyAttribute("giraffe_test.App")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
 [<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")>]
-[<assembly: System.Reflection.AssemblyProductAttribute("giraffe_learning_log.App")>]
-[<assembly: System.Reflection.AssemblyTitleAttribute("giraffe_learning_log.App")>]
+[<assembly: System.Reflection.AssemblyProductAttribute("giraffe_test.App")>]
+[<assembly: System.Reflection.AssemblyTitleAttribute("giraffe_test.App")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
 do()

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>giraffe_learning_log.App</AssemblyName>
+    <AssemblyName>giraffe_test.App</AssemblyName>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
 

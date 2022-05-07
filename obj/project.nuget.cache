@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2RMjfj9EH1LDZDy/tLKWqs9wpEYyETcXcDrlkuzBHanX3DIfx4aP7fukhoHXxIlez9e9enxUh6h7FG7kxu9ufw==",
+  "dgSpecHash": "nO7FvDG0duAOz5vrhqpeanEeY+SWTbir/+eEWcac4tianwZ0MIvjoV3hoe4Jo0ZNnHUAwnISZBlq0J3PunfIew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\940112\\MyProject\\giraffe_learning_log\\giraffe_learning_log.fsproj",
+  "projectFilePath": "C:\\Users\\940112\\MyProject\\giraffe_learning_log\\giraffe_test.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\940112\\.nuget\\packages\\fsharp.core\\6.0.1\\fsharp.core.6.0.1.nupkg.sha512",
     "C:\\Users\\940112\\.nuget\\packages\\giraffe\\5.0.0-rc-6\\giraffe.5.0.0-rc-6.nupkg.sha512",

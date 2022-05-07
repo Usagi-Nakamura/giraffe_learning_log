@@ -1181,9 +1181,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\940112\\MyProject\\giraffe_learning_log\\giraffe_learning_log.fsproj",
-      "projectName": "giraffe_learning_log.App",
-      "projectPath": "C:\\Users\\940112\\MyProject\\giraffe_learning_log\\giraffe_learning_log.fsproj",
+      "projectUniqueName": "C:\\Users\\940112\\MyProject\\giraffe_learning_log\\giraffe_test.fsproj",
+      "projectName": "giraffe_test.App",
+      "projectPath": "C:\\Users\\940112\\MyProject\\giraffe_learning_log\\giraffe_test.fsproj",
       "packagesPath": "C:\\Users\\940112\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\940112\\MyProject\\giraffe_learning_log\\obj\\",
       "projectStyle": "PackageReference",

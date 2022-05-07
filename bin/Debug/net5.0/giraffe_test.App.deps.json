@@ -31,7 +31,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "giraffe_learning_log.App/1.0.0": {
+      "giraffe_test.App/1.0.0": {
         "dependencies": {
           "FSharp.Core": "6.0.1",
           "Giraffe": "5.0.0-rc-6",
@@ -322,10 +322,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "giraffe_learning_log.App.dll": {}
+          "giraffe_test.App.dll": {}
         },
         "compile": {
-          "giraffe_learning_log.App.dll": {}
+          "giraffe_test.App.dll": {}
         }
       },
       "FSharp.Core/6.0.1": {
@@ -2243,7 +2243,7 @@
     }
   },
   "libraries": {
-    "giraffe_learning_log.App/1.0.0": {
+    "giraffe_test.App/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
