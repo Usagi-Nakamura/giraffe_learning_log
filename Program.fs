@@ -1,4 +1,4 @@
-module giraffe_learning_log.App
+module giraffe_test.App
 
 open System
 open System.IO
@@ -29,7 +29,7 @@ module Views =
     let layout (content: XmlNode list) =
         html [] [
             head [] [
-                title []  [ encodedText "giraffe_learning_log" ]
+                title []  [ encodedText "giraffe_test title" ]
                 link [ _rel  "stylesheet"
                        _type "text/css"
                        _href "/main.css" ]
@@ -38,7 +38,10 @@ module Views =
         ]
 
     let partial () =
-        h1 [] [ encodedText "giraffe_learning_log" ]
+        h1 [] [ encodedText "giraffe_test" ]
+
+    let partialEx () =
+        h1 [] [ str "another view!!" ]
 
     let index (model : Message) =
         [
@@ -46,22 +49,38 @@ module Views =
             p [] [ encodedText model.Text ]
         ] |> layout
 
+    let another_view (model: Message) =
+        [
+            partialEx()
+            p [] [ str model.Text ]
+        ] |> layout
+
+
 // ---------------------------------
 // Web app
 // ---------------------------------
 
-let indexHandler (name : string) =
-    let greetings = sprintf "Hello %s, from Giraffe!" name
+let indexHandler  (name: string, times_size : int) =
+    let greetings = sprintf "Hello %s, from Giraffe!" (name.PadLeft(times_size, '#'))  
     let model     = { Text = greetings }
     let view      = Views.index model
     htmlView view
+
+
+let anotherHandler (name: string)  =
+    let greeting = sprintf "Howdy %s" name
+    let model = { Text = greeting }
+    let view = Views.another_view model
+    htmlView view
+
 
 let webApp =
     choose [
         GET >=>
             choose [
-                route "/" >=> indexHandler "world"
-                routef "/hello/%s" indexHandler
+                route "/" >=> indexHandler ("NNNN", 10)
+                routef "/hello/%s/%i" indexHandler
+                routef "/another/%s" anotherHandler
             ]
         setStatusCode 404 >=> text "Not Found" ]
 
