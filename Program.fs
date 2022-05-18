@@ -19,6 +19,11 @@ type Message =
         Text : string
     }
 
+type AnotherMessage =
+    {
+        _data : string list
+    }
+
 // ---------------------------------
 // Views
 // ---------------------------------
@@ -49,10 +54,10 @@ module Views =
             p [] [ encodedText model.Text ]
         ] |> layout
 
-    let another_view (model: Message) =
+    let another_view (model : AnotherMessage) =
         [
             partialEx()
-            p [] [ str model.Text ]
+            p [] [ li [] [str (model._data.Item 3) ] ]
         ] |> layout
 
 
@@ -69,7 +74,8 @@ let indexHandler  (name: string, times_size : int) =
 
 let anotherHandler (name: string)  =
     let greeting = sprintf "Howdy %s" name
-    let model = { Text = greeting }
+    let model = 
+        { _data = ["abc"; "def"; "ghi"; "jkl"; "mno"] }
     let view = Views.another_view model
     htmlView view
 
