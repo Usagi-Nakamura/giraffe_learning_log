@@ -77,3 +77,32 @@ routefの第一パラメータのstringの内容を`"/hello/%s/%i"`を変えた�
         htmlView view
 
 これで無事Viewも作れることがわかりました。次はmodelを新しく作ってみようと思います。
+
+### modelを追加してみる（ 2022年５月19日 ）
+
+hanlderとviewを新しく追加できましたので次は予定通りmodelを追加してみました。  
+まずは、modelのセクションで、Messageのrecord定義があるところで次の定義を追加しました。
+
+    type AnotherMessage =
+        {
+            _data : string list
+        }
+
+その後、以前追加した次のviewのパラメータを上で作った定義に次のように差し替えます。
+
+    let another_view (model : AnotherMessage) =
+        [
+            partialEx()
+            p [] [ li [] [str (model._data.Item 3) ] ]
+        ] |> layout
+
+最後にこれを扱うハンドラも次のように差し替えます。
+
+    let anotherHandler (name: string)  =
+        let greeting = sprintf "Howdy %s" name
+        let model = 
+            { _data = ["abc"; "def"; "ghi"; "jkl"; "mno"] }
+        let view = Views.another_view model
+        htmlView view
+
+これで無事に想定通りの動きになりました。
