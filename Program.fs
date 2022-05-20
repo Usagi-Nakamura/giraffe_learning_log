@@ -52,6 +52,7 @@ module Views =
         [
             partial()
             p [] [ encodedText model.Text ]
+            a [ _href "/another/Usagi"] [ str "Go to another" ]
         ] |> layout
 
     let another_view (model : AnotherMessage) =
